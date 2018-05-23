@@ -19,11 +19,14 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
       arrMsg:[
-        {name:'菜单一',id:'1', active: 'active'},
-        {name:'菜单二',id:'2', active: ''},
+        {name:'菜单一',id:'1', active: 'active',url:'Register'},
+        {name:'菜单二',id:'2', active: '',url:'Login'},
 
       ]
     }
+  },
+  components:{
+    leftMenu
   },
   methods : {
     addClassFun (index) {
@@ -34,6 +37,7 @@ export default {
 //
 //      })
       this.arrMsg[index].active = 'active';
+      this.$router.push({name:this.arrMsg[index].url});
     }
   }
 }

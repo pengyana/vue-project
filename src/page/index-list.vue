@@ -25,6 +25,9 @@ export default {
       ]
     }
   },
+  components:{
+    leftMenu
+  },
   methods : {
     addClassFun (index) {
       this.arrMsg.map(item => {

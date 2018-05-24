@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import IndexList from '@/page/index-list'
-import leftMenu from '@/components/leftMenu'
 
 
 
@@ -14,10 +13,5 @@ export default new Router({
       name: 'IndexList',
       component:IndexList
     },
-    {
-      path: '/leftMenu',
-      name: 'leftMenu',
-      component:leftMenu
-    }
   ]
 })

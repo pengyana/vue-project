@@ -28,7 +28,46 @@
 }
 .leftMenu-li{
   color: #3b73af;
+  line-height: 30px;
 }
 .leftMenu-li:hover{
   background: #e6e6e6;
+}
+.case-content{
+
+}
+.form-mt {
+  margin-top: 16px;
+}
+.form-width {
+  width: 190px;
+}
+.form-label {
+  display: inline-block;
+  width: 110px;
+  vertical-align: top;
+  line-height: 28px;
+  text-align: right;
+  color: #666666;
+}
+.form-control-text {
+  color: #666;
+  width: 400px;
+  margin-top: 5px;
+  line-height: 1.5;
+  display: inline-block;
+  word-wrap: break-word;
+}
+.form-control {
+  display: inline-block;
+  margin-left: -4px;
+  vertical-align: middle;
+  color: #666;
+  height: 28px;
+  padding: 0 8px 0 8px;
+  border: 1px solid #CCCCCC;
+  font-size: 12px;
+}
+.info-body .form-control{
+  width: 228px;
 }

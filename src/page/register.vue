@@ -1,7 +1,8 @@
 <template>
   <div class="register">
-    <inputView :listData="inputMsg"></inputView>
+    <inputView :listData="inputMsg" :data="formData"></inputView>
     <button class="registerBtn" @click="registerFun()">注册</button>
+    <inputView></inputView>
   </div>
 </template>
 
@@ -15,6 +16,10 @@ export default {
       registerData:{
         name:'',
         age:'',
+      },
+      formData: {
+        name : 'safas',
+        age: 32
       },
       inputMsg:[
         {
@@ -46,18 +51,6 @@ export default {
             val:56
           },
         },
-//        {
-//          cType:'text',
-//          inputClasses:'bbb',
-//          type:'number',
-////          disabled:'',
-//          name:'name1',
-//          placeholder:'请输入年龄',
-//          widthChange:'200px',
-////          readonly:'',
-//          val:56
-//        },
-
       ]
     }
   },
@@ -66,8 +59,11 @@ export default {
   },
   methods : {
     registerFun(){
-      console.log(this.registerData);
+      console.log(this.formData);
     },
+    submit () {
+
+    }
   },
 
 }

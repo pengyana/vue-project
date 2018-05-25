@@ -1,6 +1,6 @@
 <template>
   <div class="info-body content f12">
-    <div v-for="mesgData in listData">
+    <div v-for="(mesgData, index) in listData">
       <div v-if="mesgData.inputType" class="form-group form-mt">
         <div class="form-label form-width">{{mesgData.textTitle}}：</div>
         <input class="form-control"
@@ -12,7 +12,7 @@
           :type="mesgData.inputAttr.type"
           :disabled="mesgData.inputAttr.disabled"
           :style="{width: mesgData.inputAttr.widthChange}"
-          v-model="mesgData.inputAttr.val"
+          v-model="data[Object.keys(data)[index]]"
         />
       </div>
       <div v-if="mesgData.listType" class="form-group form-mt">
@@ -33,13 +33,17 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      registerData:this.listData,
+      registerData:{
+        name:this.listData
+      },
     }
   },
-  props:['listData'],
+  props:['listData', 'data'],
+  computed: {
+
+  },
   methods:{
     blurFun(){
-      console.log(this.registerData)
 //      console.log(this.listData);
     }
   },

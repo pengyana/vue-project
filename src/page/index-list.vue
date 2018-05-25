@@ -14,13 +14,14 @@
 
 <script>
   import leftMenu from '../components/leftMenu'
+  import formView from '../components/formView'
 export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
       arrMsg:[
         {name:'菜单一',id:'1', active: 'active',url:'Register'},
-        {name:'菜单二',id:'2', active: '',url:'Login'},
+        {name:'菜单二',id:'2', active: '',url:'formView'},
 
       ]
     }

@@ -13,9 +13,9 @@
 
 
 <script>
-  import leftMenu from '../components/leftMenu'
-  import formView from '../components/formView'
-export default {
+  import leftMenu from '../../components/leftMenu'
+  import formView from '../../components/formView'
+export default { 
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
@@ -23,7 +23,7 @@ export default {
         {name:'菜单一',id:'1', active: 'active',url:'Register'},
         {name:'菜单二',id:'2', active: '',url:'formView'},
 
-      ]
+      ],
     }
   },
   components:{
@@ -39,12 +39,16 @@ export default {
 //      })
       this.arrMsg[index].active = 'active';
       this.$router.push({name:this.arrMsg[index].url});
-    }
+    },
+  },
+  created:function () {
+    console.log(_.defaults({ 'a': 1 }, { 'a': 3, 'b': 2 }))
+    console.log(this)
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import '../../static/css/index-list.css';
+  @import '../../../static/css/index-list.css';
 </style>

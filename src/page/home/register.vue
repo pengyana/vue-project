@@ -2,13 +2,12 @@
   <div class="register">
     <inputView :listData="inputMsg" :data="formData"></inputView>
     <button class="registerBtn" @click="registerFun()">注册</button>
-    <inputView></inputView>
   </div>
 </template>
 
 
 <script>
-  import inputView from '../components/inputView'
+  import inputView from '../../components/inputView'
 export default {
   data () {
     return {
@@ -17,6 +16,7 @@ export default {
         name:'',
         age:'',
       },
+//      提交数据
       formData: {
         name : 'safas',
         age: 32
@@ -65,11 +65,10 @@ export default {
 
     }
   },
-
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  @import '../../static/css/register.css';
+  @import '../../../static/css/register.css';
 </style>
